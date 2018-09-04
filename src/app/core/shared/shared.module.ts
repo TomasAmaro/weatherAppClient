@@ -5,11 +5,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import * as Services from './services';
 import { WeatherIconComponent } from './weather-card/weather-icon/weather-icon.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
+    RouterModule,
   ],
   declarations: [
     WeatherCardComponent,

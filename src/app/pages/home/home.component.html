@@ -7,6 +7,9 @@
           <a class="btn btn-primary" (click)="getWeather()" role="button">Search</a>
         </div>
       </div>
+      <div *ngIf="cityNotFound" class="alert alert-danger" role="alert">
+          <strong>City not found</strong> Please search a valid city.
+        </div>
     </div>
   </div>
   <div class="row">

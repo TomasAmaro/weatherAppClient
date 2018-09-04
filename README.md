@@ -1,4 +1,4 @@
-# SpingWeatherApp
+# WeatherApp Client
 
 This project uses Angular version 6.1.5 as it main framework.
 It is a simple Weather Application with authentication.

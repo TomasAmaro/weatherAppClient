@@ -1,0 +1,28 @@
+<div class="card" class="card-width">
+  <div class="card-body card-top">
+    <div class="row">
+      <div class="col-12">
+        <app-weather-icon [description]="weather?.description"></app-weather-icon>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3 class="white-font">{{weather?.location}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 float-left">
+        <h1 class="white-font">{{weather?.generalInformation?.temp | number:'1.0-0'}}ºC</h1>
+      </div>
+      <div class="col-8 float-right">
+        <ul class="white-font">
+          <li>Min: {{weather?.generalInformation?.temp_min | number:'1.0-0'}}ºC</li>
+          <li>Max: {{weather?.generalInformation?.temp_max | number:'1.0-0'}}ºC</li>
+          <li>Pressure: {{weather?.generalInformation?.pressure}}</li>
+          <li>Wind Speed: {{weather?.wind?.speed}}Km/h</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<p>{{weather.description}}</p>

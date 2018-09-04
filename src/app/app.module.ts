@@ -7,6 +7,7 @@ import { PagesModule } from './pages/pages.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './core/shared/shared.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {RouterModule} from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WeatherService } from './core/shared/services/weather/weather.service';
@@ -24,6 +25,7 @@ import { AuthInterceptor } from './core/shared/navigation/auth-interceptor';
     CoreModule,
     NgbModule.forRoot(),
     HttpClientModule,
+    RouterModule,
   ],
   providers: [
     WeatherService,

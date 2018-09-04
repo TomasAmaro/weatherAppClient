@@ -25,6 +25,7 @@ import { WeatherIconComponent } from './weather-card/weather-icon/weather-icon.c
     Services.WeatherService,
     Services.StorageService,
     Services.AuthService,
+    Services.UserService,
   ]
 })
 export class SharedModule { }

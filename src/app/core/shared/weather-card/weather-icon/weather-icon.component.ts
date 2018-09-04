@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { WeatherCodes } from '../models/weather-codes.enum';
 
 @Component({
   selector: 'app-weather-icon',
@@ -7,24 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class WeatherIconComponent implements OnInit {
 
-  @Input() description: string;
-  public sunShower: Array<string>;
-  public weatherStatus: number;
+  @Input() weatherCode: number;
+  public weatherCodes = WeatherCodes;
 
   constructor() {
-    this.sunShower = ['rainy', 'showers', 'clouds'];
   }
 
   ngOnInit() {
   }
 
-  public stringIncludes(original: string, included: Array<string>): boolean {
-    console.log(original, included);
-    for (const string of included) {
-      if (original.includes(string)) {
-        return true;
-      }
-    }
-    return false;
-  }
 }

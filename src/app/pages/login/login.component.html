@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 col-md-6 m-md-auto">
       <form [formGroup]="loginForm">
         <div class="form-group">
-          <input type="email" name="email" id="email-login" formControlName="email" placeholder="Place your email">
+          <label for="email-login">Email</label>
+          <input type="email" class="form-control" name="email" id="email-login" formControlName="email" placeholder="Place your email">
         </div>
         <div class="form-group">
-          <input type="password" name="key" id="key-login" formControlName="password" placeholder="Place your password">
+          <label for="key-login">Password</label>
+          <input type="password" class="form-control" name="key" id="key-login" formControlName="password" placeholder="Place your password">
         </div>
         <div>
         </div>
-        <a name="" id="" class="btn btn-primary" (click)="login()" role="button">Login</a>
+        <a class="btn btn-primary" (click)="login()" role="button">Login</a>
       </form>
     </div>
   </div>

@@ -31,21 +31,25 @@ export class AuthService {
       )
     );
   }
+  public setSessionOnRegister(serverResponse) {
+    this.setSession(serverResponse, StorageTypes.local);
+  }
 
-  private setSession(token, type: StorageTypes): void {
-    if (token) {
-      this.storage.setItem(type, 'id_token', token);
+  private setSession(serverResponse, type: StorageTypes): void {
+    if (serverResponse.token) {
+      console.log(serverResponse);
+      this.storage.setItem(type, 'token', serverResponse.token);
     }
   }
 
   public logout(): void {
-    this.storage.removeItem('id_token');
-    this.storage.removeItem('expires_at');
+    this.storage.removeItem('token');
     this.isLoginSubject.next(false);
   }
 
   public isLoggedIn(): boolean {
     const loginStatus: boolean = !!this.getToken();
+    console.log('login Status', loginStatus);
     this.isLoginSubject.next(loginStatus);
     return loginStatus;
   }

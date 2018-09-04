@@ -1,8 +1,8 @@
-<div class="card" class="card-width">
+<div class="card" class="card-width m-auto">
   <div class="card-body card-top">
     <div class="row">
       <div class="col-12">
-        <app-weather-icon [description]="weather?.description"></app-weather-icon>
+        <app-weather-icon [weatherCode]="weather?.code"></app-weather-icon>
       </div>
     </div>
     <div class="row">
@@ -25,4 +25,3 @@
     </div>
   </div>
 </div>
-<p>{{weather.description}}</p>

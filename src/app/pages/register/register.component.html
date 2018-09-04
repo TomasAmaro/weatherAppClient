@@ -1,3 +1,23 @@
-<p>
-  register works!
-</p>
+<div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 m-md-auto">
+        <form [formGroup]="registerForm">
+          <div class="form-group">
+            <label for="email-register">Email</label>
+            <input type="email" class="form-control" name="email" id="email-register" formControlName="email" placeholder="Place your email">
+          </div>
+          <div class="form-group">
+            <label for="pw-register">Password</label>
+            <input type="password" class="form-control" name="key" id="pw-register" formControlName="password" placeholder="Place your password">
+          </div>
+          <div class="form-group">
+              <label for="repeatpw-register">Repeat Password</label>
+              <input type="password" class="form-control" name="key" id="repeatpw-register" formControlName="repeatPassword" placeholder="Place your password">
+            </div>
+          <div>
+          </div>
+          <a name="" id="" class="btn btn-primary" (click)="createUser()" role="button">Create User</a>
+        </form>
+      </div>
+    </div>
+  </div>

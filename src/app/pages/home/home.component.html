@@ -2,14 +2,18 @@
   <div class="row">
     <div class="col-12">
       <div class="input-group mb-3">
-        <input type="text" [(ngModel)]="location" class="form-control" placeholder="Location"  aria-label="Weather's Location">
+        <input type="text" [(ngModel)]="location" class="form-control" placeholder="Location" aria-label="Weather's Location">
         <div class="input-group-append">
           <a class="btn btn-primary" (click)="getWeather()" role="button">Search</a>
         </div>
       </div>
     </div>
   </div>
-  <div *ngIf="currentWeather" class="card-deck">
-    <app-weather-card [weather]="currentWeather"></app-weather-card>
+  <div class="row">
+    <div class="col-12 m-auto">
+      <div *ngIf="currentWeather" class="card-deck">
+        <app-weather-card [weather]="currentWeather"></app-weather-card>
+      </div>
+    </div>
   </div>
 </div>
